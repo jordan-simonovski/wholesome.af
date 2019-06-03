@@ -10,7 +10,7 @@ h1 {
 
 body {
     background-color: #eddcff;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #canvas {
@@ -30,10 +30,16 @@ body {
     max-height: 60vh;
 }
 
-img {
+.image {
     max-width: 80rem;
-    max-height: 60vh;
+    max-height: 30rem;
     height: auto;
     display: block;
     border: 20px solid #ffedfe;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .image {
+        max-height: 40rem;
+    }
 }
