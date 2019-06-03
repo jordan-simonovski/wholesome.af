@@ -1,0 +1,68 @@
+<head>
+    <title>💕ｗｈｏｌｅｓｏｍｅ ａｆ💖</title>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="💕ｗｈｏｌｅｓｏｍｅ ａｆ💖">
+    <meta name="twitter:description" content="💕ｗｈｏｌｅｓｏｍｅ ａｆ💖">
+    <meta name="twitter:image" content="https://wholesome.af/img/lola-1.jpg">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="💕ｗｈｏｌｅｓｏｍｅ ａｆ💖" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://wholesome.af/img/lola-1.jpg" />
+    <meta property="og:image:secure_url" content="https://wholesome.af/img/lola-1.jpg" />
+    <meta property="og:description" content="💕ｗｈｏｌｅｓｏｍｅ ａｆ💖" />
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134665544-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-134665544-2');
+    </script> -->
+</head>
+<body>
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        var imageIndex = getRandomInt(5);
+
+        document.body.style.backgroundImage = "url('img/lola-" + imageIndex + ".png')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+    </script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("June 15, 2019 15:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("countdown-value").innerHTML = days + " days \n" + hours + " hours \n"
+        + minutes + " minutes \n" + seconds + " seconds ";
+
+        // If the count down is finished, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown-value").innerHTML = "IT'S TIME!";
+        }
+        }, 1000);
+    </script>
+    <h1 id="countdown-value"></h1>
+</body>
