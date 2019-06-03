@@ -42,4 +42,7 @@ body {
     .image {
         max-height: 40rem;
     }
+    h1 {
+        font-size: 6rem;
+    }
 }
