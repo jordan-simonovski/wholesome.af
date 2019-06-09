@@ -1,6 +1,14 @@
 var container = document.getElementById('animate');
+// var deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 var emoji = ['🍭', '💖', '🌈', '💖', '💕', '💞','💝','🐶','🐶','💓'];
 var circles = [];
+// var mobileWidthBreakPoint = 981;
+var emojiFontSize = '50px';
+
+// if (deviceWidth <= mobileWidthBreakPoint) {
+//   emojiFontSize = '6em';
+// }
 
 for (var i = 0; i < 15; i++) {
   addCircle(i * 150, [10 + 0, 300], emoji[Math.floor(Math.random() * emoji.length)]);
@@ -34,13 +42,12 @@ function Circle(x, y, c, v, range) {
   /*this.element.style.display = 'block';*/
   this.element.style.opacity = 0;
   this.element.style.position = 'absolute';
-  this.element.style.fontSize = '26px';
+  this.element.style.fontSize = '50px';
   this.element.style.color = 'hsl('+(Math.random()*360|0)+',80%,50%)';
   this.element.innerHTML = c;
   container.appendChild(this.element);
 
   this.update = function() {
-    var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     if (_this.y > viewPortHeight) {
       _this.y = 80 + Math.random() * 4;
       _this.x = _this.range[0] + Math.random() * _this.range[1];
