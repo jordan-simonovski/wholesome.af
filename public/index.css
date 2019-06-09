@@ -30,6 +30,15 @@ body {
     max-height: 60vh;
 }
 
+#animate{
+    left: 0px;
+    top: -100px;
+    margin: 0 auto;
+    width: 20px;
+    overflow: visible;
+    position: relative;
+}  
+
 .image {
     max-width: 80rem;
     max-height: 30rem;
