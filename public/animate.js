@@ -13,8 +13,6 @@ for (var i = 0; i < 15; i++) {
   addCircle(i * 150, [10 + 600, 300], emoji[Math.floor(Math.random() * emoji.length)]);
 }
 
-
-
 function addCircle(delay, range, color) {
   setTimeout(function() {
     var c = new Circle(range[0] + Math.random() * range[1], 80 + Math.random() * 4, color, {
@@ -42,7 +40,8 @@ function Circle(x, y, c, v, range) {
   container.appendChild(this.element);
 
   this.update = function() {
-    if (_this.y > 800) {
+    var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    if (_this.y > viewPortHeight) {
       _this.y = 80 + Math.random() * 4;
       _this.x = _this.range[0] + Math.random() * _this.range[1];
     }

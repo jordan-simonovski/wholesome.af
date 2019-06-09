@@ -13,7 +13,7 @@ h1 {
 
 body {
     background-color: #eddcff;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 #canvas {
@@ -40,6 +40,8 @@ body {
     width: 10px;
     overflow: visible;
     position: relative;
+    /* position: absolute; */
+    z-index: -10;
 }  
 
 .image {
