@@ -1,16 +1,17 @@
 var container = document.getElementById('animate');
 // var deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+var deviceWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 var emoji = ['🍭', '💖', '🌈', '💖', '💕', '💞','💝','🐶','🐶','💓'];
 var circles = [];
-// var mobileWidthBreakPoint = 981;
-var emojiFontSize = '50px';
+var mobileWidthBreakPoint = 981;
+var emojiFontSize = '4em';
 
-// if (deviceWidth <= mobileWidthBreakPoint) {
-//   emojiFontSize = '6em';
-// }
+if (deviceWidth <= mobileWidthBreakPoint) {
+  emojiFontSize = '6em';
+}
 
-for (var i = 0; i < 15; i++) {
+for (var i = 0; i < 20; i++) {
   addCircle(i * 150, [10 + 0, 300], emoji[Math.floor(Math.random() * emoji.length)]);
   addCircle(i * 150, [10 + 0, -300], emoji[Math.floor(Math.random() * emoji.length)]);
   addCircle(i * 150, [10 - 200, -300], emoji[Math.floor(Math.random() * emoji.length)]);
@@ -38,17 +39,17 @@ function Circle(x, y, c, v, range) {
   this.color = c;
   this.v = v;
   this.range = range;
-  this.element = document.createElement('span');
+  this.element = document.createElement('div');
   /*this.element.style.display = 'block';*/
   this.element.style.opacity = 0;
   this.element.style.position = 'absolute';
-  this.element.style.fontSize = '50px';
+  this.element.style.fontSize = emojiFontSize;
   this.element.style.color = 'hsl('+(Math.random()*360|0)+',80%,50%)';
   this.element.innerHTML = c;
   container.appendChild(this.element);
 
   this.update = function() {
-    if (_this.y > viewPortHeight) {
+    if (_this.y > viewPortHeight || _this.x > (deviceWidth - 100)) {
       _this.y = 80 + Math.random() * 4;
       _this.x = _this.range[0] + Math.random() * _this.range[1];
     }
