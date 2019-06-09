@@ -3,7 +3,8 @@ h1 {
     margin-right: 25%;
     font-size: 3.5rem;
     text-align: center;
-    font-family: 'Bubblegum Sans', cursive;
+    /* font-family: 'Bubblegum Sans', cursive; */
+    font-family: 'Comic Sans MS', cursive;
     color: white;
     text-shadow: 2px 2px #7a7a7a;
     margin-top: 0;
