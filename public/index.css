@@ -1,11 +1,13 @@
 h1 {
     margin-left: 25%;
     margin-right: 25%;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     font-family: 'Bubblegum Sans', cursive;
     color: white;
     text-shadow: 2px 2px #7a7a7a;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 body {
@@ -34,14 +36,14 @@ body {
     left: 0px;
     top: -100px;
     margin: 0 auto;
-    width: 20px;
+    width: 10px;
     overflow: visible;
     position: relative;
 }  
 
 .image {
     max-width: 80rem;
-    max-height: 30rem;
+    max-height: 25rem;
     height: auto;
     display: block;
     border: 20px solid #ffedfe;
@@ -53,5 +55,10 @@ body {
     }
     h1 {
         font-size: 6rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #animate {
+        width: 100%;
     }
 }

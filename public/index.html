@@ -46,15 +46,21 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the element with id="demo"
-            document.getElementById("countdown-value").innerHTML = days + " days " + hours + " hours "
-            + minutes + " minutes " + seconds + " seconds ";
+            // Display the result in the elements
+            document.getElementById("countdown-days").innerHTML = days + " days";
+            document.getElementById("countdown-hours").innerHTML = hours + " hours";
+            document.getElementById("countdown-minutes").innerHTML = minutes + " minutes";
+            document.getElementById("countdown-seconds").innerHTML = seconds + " seconds";
+
         }, 1000);
 
     </script>
+    <div id="animate"></div>
     <div class="container center">
-        <div id="animate"></div>
-        <h1 id="countdown-value"></h1>
+        <h1 id="countdown-days"></h1>
+        <h1 id="countdown-hours"></h1>
+        <h1 id="countdown-minutes"></h1>
+        <h1 id="countdown-seconds"></h1>
         <img id="my-img" class="image center">
     </div>
 
@@ -63,7 +69,7 @@
         function getRandomInt(max) {
             return Math.floor(Math.random() * Math.floor(max));
         }
-        var imageIndex = getRandomInt(5);
+        var imageIndex = getRandomInt(6);
         document.getElementById('my-img').src= "./img/lola-" + imageIndex + ".png";
     </script>
 </body>
