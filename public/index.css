@@ -44,8 +44,7 @@ body {
 }  
 
 .image {
-    max-width: 80rem;
-    max-height: 25rem;
+    width: 20em;
     height: auto;
     display: block;
     border: 20px solid #ffedfe;
@@ -54,6 +53,7 @@ body {
 @media only screen and (max-device-width: 600px) {
     .image {
         max-height: 40rem;
+        width: 40em;
     }
     h1 {
         font-family: 'Bubblegum Sans', cursive;
