@@ -35,7 +35,7 @@ function addCircle(delay, range, color) {
 function Circle(x, y, c, v, range) {
   var _this = this;
   this.x = x;
-  this.y = y;
+  this.y = y - 100;
   this.color = c;
   this.v = v;
   this.range = range;
@@ -49,8 +49,8 @@ function Circle(x, y, c, v, range) {
   container.appendChild(this.element);
 
   this.update = function() {
-    if (_this.y > viewPortHeight || _this.x > (deviceWidth - 100)) {
-      _this.y = 80 + Math.random() * 4;
+    if (_this.y > viewPortHeight + 100 || _this.x > (deviceWidth - 100)) {
+      _this.y = 80 + Math.random() * 4 - 100;
       _this.x = _this.range[0] + Math.random() * _this.range[1];
     }
     _this.y += _this.v.y;
